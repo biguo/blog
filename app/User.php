@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Model\Task;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
