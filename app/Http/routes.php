@@ -3,9 +3,13 @@
 use App\Model\Task;
 use Illuminate\Http\Request;
 
+Route::auth();
 /**
  * Display All Tasks
  */
+//Route::get('/tasks', 'TaskController@index');
+//Route::post('/task', 'TaskController@store');
+//Route::delete('/task/{task}', 'TaskController@destroy');
 
 Route::get('/', function () {
     $tasks = Task::orderBy('created_at', 'asc')->get();
@@ -19,7 +23,7 @@ Route::get('/', function () {
  */
 Route::post('/task', function (Request $request) {
     $validator = Validator::make($request->all(), [
-        'name' => 'required|max:255',
+        'name' => 'required|max:6',
     ]);
 
     if ($validator->fails()) {
