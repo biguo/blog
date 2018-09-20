@@ -2,8 +2,8 @@
 
 namespace App\Repositories;
 
+use App\Model\Task;
 use App\User;
-use App\Task;
 
 class TaskRepository{
     /**
@@ -14,7 +14,7 @@ class TaskRepository{
      */
     public function forUser(User $user)
     {
-        return \App\Model\Task::where('user_id', $user->id)
+        return Task::where('user_id', $user->id)
             ->orderBy('created_at', 'asc')
             ->get();
     }

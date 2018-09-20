@@ -7,17 +7,18 @@ Route::auth();
 /**
  * Display All Tasks
  */
+
 Route::get('/tasks', 'Common\TaskController@index');
 Route::post('/task', 'Common\TaskController@store');
 Route::delete('/task/{task}', 'Common\TaskController@destroy');
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     $tasks = Task::orderBy('created_at', 'asc')->get();
 
     return view('common.tasks', [
         'tasks' => $tasks
     ]);
-});*/
+});
 
 /*Route::post('/task', function (Request $request) {
     $validator = Validator::make($request->all(), [
