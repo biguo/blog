@@ -4,12 +4,9 @@ use App\Model\Task;
 use Illuminate\Http\Request;
 
 Route::auth();
-/**
- * Display All Tasks
- */
 
+Route::resource('photo', 'Common\PhotoController');
 Route::get('/books', 'Common\BooksController@index');
-
 Route::get('/tasks', 'Common\TaskController@index');
 Route::post('/task', 'Common\TaskController@store');
 Route::delete('/task/{task}', 'Common\TaskController@destroy');
