@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Model;
+namespace App\Model\Task;
 
-use App\User;
+use App\Model\User\User;
 use Illuminate\Database\Eloquent\Model;
 
-class Task extends Model
+class  Task extends Model
 {
     //
     protected $fillable = ['name'];

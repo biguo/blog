@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Model\Task;
 
-use App\Model\Task;
-use App\User;
+use App\Model\Task\Task;
+use App\Model\User\User;
 
 class TaskRepository{
     /**

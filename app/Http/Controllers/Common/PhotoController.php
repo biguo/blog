@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Common;
 
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class PhotoController extends Controller
@@ -16,9 +14,11 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        //
-        echo "<hr>index<hr>";
-
+        $data = [
+            'one'=>'suzhou',
+            'two'=>'shanghai'
+        ];
+        return view('common.photo.index', ['data' =>$data]);
     }
 
     /**
