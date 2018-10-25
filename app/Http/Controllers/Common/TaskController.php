@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Common;
 
-use App\Model\Task;
-use App\Repositories\TaskRepository;
-use Illuminate\Auth\Access\AuthorizationException;
+
+use App\Model\Task\Task;
+use App\Model\Task\TaskRepository;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
